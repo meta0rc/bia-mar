@@ -1,0 +1,191 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4cb5f1531d.js" crossorigin="anonymous"></script>
+    
+    <title>Bia - Mar de Acessórios</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+        <a href="index.html">
+            <img src="../imagens/logo.jpg" alt="logo">
+        </a>
+        </div>
+        <input type="checkbox" id="chec" onclick="call_menu()">
+        <label for="chec">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="carrinho" class="carrinho"><i class="fas fa-shopping-cart"></i>
+            <span id="cart">Carrinho</span>
+        <div class="search">
+            <input type="search" name="Buscar" id="search-bar" placeholder="Buscar...">
+            <i class="fas fa-search"></i>
+        </div>
+       
+        
+     
+            <div class="icons">
+
+                </a>
+                <a class="insta" href="https://www.instagram.com/biamardeacessorios/">
+                    <i class="fab fa-instagram"></i></a>
+            
+              
+                   
+                
+                  
+              
+            </div>
+            <span class="mail">Email: bia@example.com.br</span>
+       
+               
+            
+           
+            
+        <nav id="menu_nav">
+            <ul>
+                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Sobre</a></li>
+                
+                    <input type="checkbox"  id="drop" onclick="expand()">
+                    <label for="drop">
+                        <li><a>Acessórios</a>
+                    </label>
+                    <ul id="submenu">
+                        <li><a href="#">Colares femininos</a></li>
+                        <li><a href="#">Colares Masculinos</a></li>
+                        <li><a href="#">Brincos</a></li>
+                        <li><a href="#">Pulseiras</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <!--
+ <div class="banner">
+            <img src="../imagens/banner modelo.PNG" alt="">
+            <div class="compra">
+                <a href="http://mercadolivre.com.br/">Compre Agora</a>
+            </div>
+        </div>
+        -->
+       
+      
+     
+        <div class="produtos">
+            <ul class="thumbs">
+                <li>
+                    <a href=".produto"><img src="../imagens/colar (7).jpg" alt=""></a>
+                    <div class="product-name">
+                        <span class="product-title">Colar foliado a ouro e cravejado</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">R$ 39,90</span>
+                        <span class="alternative-prince">Ou 12x de R$ 1,50.</span>
+                    </div>
+                    <div class="product-pay">
+                        <a href="http://mercadolivre.com.br/">Comprar</a>
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </li>
+                <li>
+                    <a href=".produto"><img src="../imagens/colar (11).jpg" alt=""></a>
+                    <div class="product-name">
+                        <span class="product-title">Colar de diamantes</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">R$ 39,90</span>
+                        <span class="alternative-prince">Ou 12x de R$ 1,50.</span>
+                    </div>
+                    
+                    <div class="product-pay">
+                        <a href="http://mercadolivre.com.br/">Comprar</a>
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </li>
+                <li>
+                    <a href=".produto"><img src="../imagens/colar (8).jpg" alt=""></a>
+                    <div class="product-name">
+                        <span class="product-title">Colar Testato a ouro e cravejado</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">R$ 29,90</span>
+                        <span class="alternative-prince">Ou 12x de R$ 1,00.</span>
+                    </div>
+                    
+                    <div class="product-pay">
+                        <a href="http://mercadolivre.com.br/">Comprar</a>
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </li>
+                <li>
+                    <a href=".produto"><img src="../imagens/colar (9).jpg" alt=""></a>
+                    <div class="product-name">
+                        <span class="product-title">Colar comum</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">R$ 39,90</span>
+                        <span class="alternative-prince">Ou 12x de R$ 1,50.</span>
+                    </div>
+                    
+                    <div class="product-pay">
+                        <a href="http://mercadolivre.com.br/">Comprar</a>
+                            <button class="btn-add-cart" onclick="alter()">
+                                <i class="fas fa-cart-plus" ></i>
+                            </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <script>
+        let car = document.getElementById("cart") //aqui é sómente para adicionar na frente 
+        let carrinho = 0
+        const buttonAdd = document.getElementsByClassName(".btn-add-cart")
+        car.innerText = 0
+
+            function alter(){
+                console.log(car, carrinho, "texte")
+                while((buttonAdd).click == false){
+                    carrinho = carrinho + 1;
+                }
+                
+                carrinho++;
+                car.innerText = carrinho
+            }
+        const bars = document.getElementById("chec")
+        const nav = document.getElementById("menu_nav")
+        const icon_bar = document.getElementsByClassName(".fa fa-bars")
+
+        function call_menu(){
+
+               if((bars).checked == true) {
+                  nav.classList.add("selected")
+                  icon_bar.style.color = '#000'
+                  
+               }
+               else{
+                nav.classList.remove("selected")
+               }
+        }
+            function expand(){
+                const drop_menu = document.getElementById("drop")
+                const sub = document.getElementById("submenu")
+                    if((drop).checked == true) {
+                        sub.classList.add("selected_2")
+                    }
+                    else{
+                        sub.classList.remove("selected_2")
+                    }
+            }
+            
+    </script>
+</body>
+</html>
